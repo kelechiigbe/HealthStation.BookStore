@@ -1,0 +1,29 @@
+@apiHostAddress = http://localhost:5189/api
+@topSellersEndpoint = authors/top-sellers
+@revenueEndpoint = transactions/revenue
+@deleteBooksEndpoint = books
+
+@EndDate = 2024-05-10
+@StartDate = 2023-11-10
+
+GET {{apiHostAddress}}/{{topSellersEndpoint}}
+Accept: application/json
+
+###
+
+GET {{apiHostAddress}}/{{revenueEndpoint}}?StartDate={{StartDate}}&EndDate={{EndDate}}
+Accept: application/json
+
+###
+
+DELETE {{apiHostAddress}}/books
+Accept: application/json
+Content-Type: application/json
+
+{
+  "bookIds": [
+    "001b901a-30ef-4849-ad3e-47f450ccd2c4"
+  ]
+}
+
+###
