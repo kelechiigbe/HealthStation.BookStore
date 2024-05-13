@@ -22,6 +22,9 @@ namespace HealthStation.BookStore.Application.FluentValidators
                 .NotEmpty().WithMessage("End date is required.")
                 .Must(date => date != DateTime.MinValue).WithMessage("Invalid end date.")
                 .Must(date => date != DateTime.MaxValue).WithMessage("Invalid end date.");
+            RuleFor(x => x.EndDate)
+           .GreaterThanOrEqualTo(x => x.StartDate)
+           .WithMessage("End date must be greater than or equal to start date.");
         }
     }
 
