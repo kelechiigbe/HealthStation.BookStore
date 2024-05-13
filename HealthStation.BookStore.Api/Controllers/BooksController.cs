@@ -1,4 +1,5 @@
 ﻿using HealthStation.BookStore.Api.Helpers;
+using HealthStation.BookStore.Application.Extensions;
 using HealthStation.BookStore.Application.Interface;
 using HealthStation.BookStore.Application.ViewModel.Requests;
 using HealthStation.BookStore.Application.ViewModel.Responses;
@@ -34,7 +35,7 @@ namespace HealthStation.BookStore.Api.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteBooksByIds(BookDeleteRequest bookDeleteRequest)
         {
-            _logger.LogInformation("Deleting books with IDs: {BookIds}", bookDeleteRequest.BookIds);
+            _logger.LogInformation("Deleting books with IDs: {BookIds}", bookDeleteRequest.BookIds.ToCommaSeparatedString());
 
             var deletionResult = await _unitOfWork.Books.DeleteBooksByIdsAsync(bookDeleteRequest.BookIds);
 

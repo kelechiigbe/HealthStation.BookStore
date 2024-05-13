@@ -33,7 +33,7 @@ namespace HealthStation.BookStore.Api.Controllers
         [HttpGet("revenue")]
         public async Task<IActionResult> GetRevenueGenerated([FromQuery] ReportingPeriodRequest reportingPeriodRequest)
         {
-            _logger.LogInformation("Retrieving revenue for ReportingPeriod: {ReportingPeriod}", reportingPeriodRequest);
+            _logger.LogInformation("Retrieving revenue for ReportingPeriod: {StartDate} - {EndDate}", reportingPeriodRequest.StartDate, reportingPeriodRequest.EndDate);
 
             var revenue = await _unitOfWork.Transactions.GetRevenueGeneratedOverPeriodAsync(reportingPeriodRequest);
 
