@@ -3,8 +3,8 @@
 @revenueEndpoint = transactions/revenue
 @deleteBooksEndpoint = books
 
-@EndDate = 2024-05-10
 @StartDate = 2023-11-10
+@EndDate = 2024-05-10
 
 GET {{apiHostAddress}}/{{topSellersEndpoint}}
 Accept: application/json
