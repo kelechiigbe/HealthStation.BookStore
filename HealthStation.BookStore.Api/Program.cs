@@ -1,4 +1,3 @@
-
 using HealthStation.BookStore.Application.Exceptions;
 using HealthStation.BookStore.Application.Extensions;
 using HealthStation.BookStore.Infrastructure.Data;
@@ -20,7 +19,7 @@ namespace HealthStation.BookStore.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddInfrastructureServices<BookStoreDbContext>(connectionString);
 
                 var app = builder.Build();
@@ -43,7 +42,6 @@ namespace HealthStation.BookStore.Api
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
