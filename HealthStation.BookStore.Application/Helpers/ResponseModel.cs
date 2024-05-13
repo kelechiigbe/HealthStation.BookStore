@@ -1,4 +1,4 @@
-﻿using HealthStation.BookStore.Application.Interface;
+using HealthStation.BookStore.Application.Interface;
 
 namespace HealthStation.BookStore.Api.Helpers
 {
