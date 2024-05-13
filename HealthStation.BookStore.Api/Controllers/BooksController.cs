@@ -36,7 +36,7 @@ namespace HealthStation.BookStore.Api.Controllers
         {
             _logger.LogInformation("Deleting books with IDs: {BookIds}", bookDeleteRequest.BookIds);
 
-            var deletionResult = await _unitOfWork.Books.DeleteBooksByIds(bookDeleteRequest.BookIds);
+            var deletionResult = await _unitOfWork.Books.DeleteBooksByIdsAsync(bookDeleteRequest.BookIds);
 
             _logger.LogInformation("Deletion result: {DeletionResult}", deletionResult);
 

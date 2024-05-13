@@ -23,7 +23,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// </summary>
         /// <param name="reportingPeriodRequest">The reporting period request.</param>
         /// <returns>The total revenue generated.</returns>
-        public async Task<decimal> GetRevenueGeneratedOverPeriod(ReportingPeriodRequest reportingPeriodRequest)
+        public async Task<decimal> GetRevenueGeneratedOverPeriodAsync(ReportingPeriodRequest reportingPeriodRequest)
         {
             decimal totalRevenue = await _context.Transactions
                                     .Where(t => t.CreatedDate >= reportingPeriodRequest.StartDate && t.CreatedDate <= reportingPeriodRequest.EndDate)

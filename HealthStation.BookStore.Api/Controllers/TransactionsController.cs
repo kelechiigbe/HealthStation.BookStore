@@ -35,7 +35,7 @@ namespace HealthStation.BookStore.Api.Controllers
         {
             _logger.LogInformation("Retrieving revenue for ReportingPeriod: {ReportingPeriod}", reportingPeriodRequest);
 
-            var revenue = await _unitOfWork.Transactions.GetRevenueGeneratedOverPeriod(reportingPeriodRequest);
+            var revenue = await _unitOfWork.Transactions.GetRevenueGeneratedOverPeriodAsync(reportingPeriodRequest);
 
             _logger.LogInformation("Retrieved revenue successful for period: {StartDate} - {EndDate}", reportingPeriodRequest.StartDate, reportingPeriodRequest.EndDate);
 

@@ -13,6 +13,6 @@ namespace HealthStation.BookStore.Application.Interface
         /// </summary>
         /// <param name="reportingPeriodRequest">The reporting period request.</param>
         /// <returns>The revenue generated over the specified period.</returns>
-        Task<decimal> GetRevenueGeneratedOverPeriod(ReportingPeriodRequest reportingPeriodRequest);
+        Task<decimal> GetRevenueGeneratedOverPeriodAsync(ReportingPeriodRequest reportingPeriodRequest);
     }
 }

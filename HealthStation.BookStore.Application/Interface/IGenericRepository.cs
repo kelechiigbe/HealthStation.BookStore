@@ -14,17 +14,17 @@ namespace HealthStation.BookStore.Application.Interface
         /// <summary>
         /// Get entity by id.
         /// </summary>
-        Task<T> Get(Guid id);
+        Task<T> GetAsync(Guid id);
 
         /// <summary>
         /// Get all entities.
         /// </summary>
-        Task<IEnumerable<T>> GetAll();
+        Task<IEnumerable<T>> GetAllAsync();
 
         /// <summary>
         /// Add a new entity.
         /// </summary>
-        Task Add(T entity);
+        Task AddAsync(T entity);
 
         /// <summary>
         /// Delete an entity.

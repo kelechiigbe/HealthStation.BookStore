@@ -28,7 +28,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// </summary>
         /// <param name="bookIds">The list of book IDs to delete.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public async Task<bool> DeleteBooksByIds(List<Guid> bookIds)
+        public async Task<bool> DeleteBooksByIdsAsync(List<Guid> bookIds)
         {
             var booksToDelete = await _context.Books
                          .Where(b => bookIds.Contains(b.Id))

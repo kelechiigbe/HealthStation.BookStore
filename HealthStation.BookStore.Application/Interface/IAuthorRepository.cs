@@ -13,7 +13,7 @@ namespace HealthStation.BookStore.Application.Interface
         /// </summary>
         /// <param name="topAuthorsCount">The number of top authors to retrieve.</param>
         /// <returns>A collection of top selling authors.</returns>
-        Task<IEnumerable<TopSellingAuthorsResponse>> GetTopSellingAuthors(int topAuthorsCount);
+        Task<IEnumerable<TopSellingAuthorsResponse>> GetTopSellingAuthorsAsync(int topAuthorsCount);
     }
 
 }

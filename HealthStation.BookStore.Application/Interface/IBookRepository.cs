@@ -17,7 +17,7 @@ namespace HealthStation.BookStore.Application.Interface
         /// </summary>
         /// <param name="bookIds">The list of book IDs to delete.</param>
         /// <returns>A boolean indicating the success of the operation.</returns>
-        Task<bool> DeleteBooksByIds(List<Guid> bookIds);
+        Task<bool> DeleteBooksByIdsAsync(List<Guid> bookIds);
     }
 
 }

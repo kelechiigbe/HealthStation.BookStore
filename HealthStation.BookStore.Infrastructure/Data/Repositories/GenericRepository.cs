@@ -16,7 +16,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// <summary>
         /// Asynchronously retrieves an entity by its unique identifier.
         /// </summary>
-        public async Task<T> Get(Guid id)
+        public async Task<T> GetAsync(Guid id)
         {
             return await _context.Set<T>().FindAsync(id);
         }
@@ -24,7 +24,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// <summary>
         /// Asynchronously retrieves all entities of type T.
         /// </summary>
-        public async Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
@@ -32,7 +32,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// <summary>
         /// Asynchronously adds a new entity to the repository.
         /// </summary>
-        public async Task Add(T entity)
+        public async Task AddAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
         }

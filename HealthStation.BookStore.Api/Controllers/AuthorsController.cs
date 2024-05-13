@@ -35,7 +35,7 @@ namespace HealthStation.BookStore.Api.Controllers
         {
             _logger.LogInformation("Getting top selling authors...");
 
-            var topSellingAuthors = await _unitOfWork.Authors.GetTopSellingAuthors(topAuthorsCount);
+            var topSellingAuthors = await _unitOfWork.Authors.GetTopSellingAuthorsAsync(topAuthorsCount);
 
             _logger.LogInformation("Retrieved top selling authors successfully.");
 

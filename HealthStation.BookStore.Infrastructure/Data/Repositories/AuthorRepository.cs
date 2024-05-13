@@ -23,7 +23,7 @@ namespace HealthStation.BookStore.Infrastructure.Data.Repositories
         /// </summary>
         /// <param name="topAuthorsCount">The number of top authors to retrieve.</param>
         /// <returns>A list of top selling authors.</returns>
-        public async Task<IEnumerable<TopSellingAuthorsResponse>> GetTopSellingAuthors(int topAuthorsCount)
+        public async Task<IEnumerable<TopSellingAuthorsResponse>> GetTopSellingAuthorsAsync(int topAuthorsCount)
         {
             var topSellingAuthors = await _context.Transactions
                 .Include(t => t.Book)
